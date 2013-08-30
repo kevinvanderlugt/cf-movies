@@ -1,4 +1,21 @@
 <h1>Movies#index</h1>
-<p>A list of all movies</p>
+<p>A list of all movies:</p>
+
+<table border="1">
+  <tr>
+    <th>Title</th>
+    <th>Genre</th>
+    <th>Year</th>
+    <th>Votes</th>
+  </tr>
+  <% @movies.each do |movie| %>
+  <tr>
+    <td><%= movie.title %></td>
+    <td><%= movie.genre %></td>
+    <td><%= movie.year %></td>
+    <td><%= movie.votes_count %></td>
+  </tr>
+  <% end %>
+</table>
 
 <%= link_to "Home", root_path %>
